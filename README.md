@@ -1,4 +1,4 @@
-# Frontend Developer Recruitment Test (React Edition)
+# React JS Developer Recruitment Test
 
 Welcome to our React-focused frontend developer assessment! This test evaluates your React proficiency, problem-solving skills, and UI/UX sensibilities through practical implementation and code improvements.
 
