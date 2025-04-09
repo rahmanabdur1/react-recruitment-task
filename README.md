@@ -1,145 +1,76 @@
-# React JS Developer Recruitment Test
+Complaint Submission App
+A simple React-based application for submitting and viewing complaints using a REST API.
 
-Welcome to our React-focused frontend developer assessment! This test evaluates your React proficiency, problem-solving skills, and UI/UX sensibilities through practical implementation and code improvements.
+Features
+Submit complaints with a title and body
 
-## Project Overview
+View a list of submitted complaints
 
-This React project contains intentional issues and UI limitations. Your task is to:
+Real-time form validation with error feedback
 
-1. Identify and fix implementation errors
-2. Enhance the user experience
-3. Improve code quality
-4. Add essential features
+API integration with loading and success states
 
-**Key Technologies**:
+Responsive layout for better user experience
 
-- React 18+
-- TypeScript
-- Npm (required)
-- Modern CSS practices
+Technologies Used
+React (with Hooks)
 
-## Getting Started
+TypeScript
 
-### 1. Fork the Repository
+Fetch API
 
-First, fork this repository to your GitHub account.
+CSS (custom styling)
 
-### 2. Clone the Repository
+🚀 Getting Started
 
-Clone the forked repository to your local machine.
+# Clone the repository
+git clone https://github.com/yourusername/complaint-app.git
 
-### 3. Install Dependencies
+# Navigate into the project directory
+cd complaint-app
 
-Navigate to the project directory and install the necessary dependencies using Npm.
-
-```
+# Install dependencies
 npm install
-```
 
-### 4. Run the Development Server
+# Start the development server
+npm start
+🛠️ Summary of Changes
+Fixed:
 
-Start the development server using the appropriate command.
+API endpoint configuration
 
-```
-npm run dev
-```
+Form state reset bug
 
-This will start the server, and you can view the application in your browser at `http://localhost:5173/`.
+Inconsistent error handling for failed requests
 
-## Your Challenge
+Improved:
 
-### Primary Task (App.tsx)
+UI layout with better spacing and styling
 
-- **Edit only `src/App.tsx`**
-- Fix all technical implementation issues
-- Improve UI/UX while maintaining functionality
-- Implement proper error handling
-- Add loading states and user feedback
-- Ensure responsive design
+Button states and feedback during form submission
 
-### Key Requirements
+Responsive design with media queries
 
-1. **Bug Fixes**:
+Loading and success indicators for better UX
 
-   - API endpoint configuration
-   - State management issues
-   - Form submission handling
-   - Proper error display
+Added:
 
-2. **UI Enhancements**:
+Centralized API base URL constant
 
-   - Implement modern design system
-   - Add loading states with visual feedback
-   - Create responsive complaint cards
-   - Improve form accessibility
+useCallback and safe useEffect cleanup
 
-3. **Code Quality**:
-   - Proper TypeScript implementation
-   - Component organization
-   - Efficient API handling
-   - Memory leak prevention
+Form validation and accessibility improvements
 
-### Reference Implementation
+Auto-clearing of error/success messages with timeout
 
-[Expected Result](https://sugary-vue-recruitment-demo.netlify.app/)
+📌 Technical Decisions
+Used useCallback for memoizing the fetch function
 
-## Submission Process
+Added a setTimeout to auto-clear user notifications
 
-1. Commit your changes to your fork
-2. Create a Pull Request to the original repository with:
-   - Clear title describing main improvement
-   - Detailed description of changes made
-   - Notes on technical decisions
+Applied native form validation to assist accessibility
 
-**PR Message Template**:
+Defined a reusable API base URL to simplify configuration
 
-```markdown
-## Summary of Changes
+Ensured responsive design and mobile compatibility
 
-- Fixed: [List technical fixes]
-- Improved: [List UI/UX improvements]
-- Added: [New features implemented]
-
-## Technical Decisions
-
-[Explain key technical choices and tradeoffs]
-
-## Screenshots
-
-[Before/After images if possible]
-```
-
-## Evaluation Criteria
-
-- **Technical Implementation**:
-
-  - API error handling
-  - State management
-  - Type safety
-  - Performance optimizations
-
-- **UI/UX Quality**:
-
-  - Visual hierarchy
-  - Responsive design
-  - User feedback
-  - Accessibility
-
-- **Code Quality**:
-
-  - Readability
-  - Component structure
-  - TypeScript usage
-  - Error boundaries
-
-- **Problem Solving**:
-  - Edge case handling
-  - Memory management
-  - Async operation safety
-  - Form validation
-
----
-
-**Note**: We specifically look for attention to detail in handling loading states, error scenarios, and creating intuitive user interactions. Avoid using any UI libraries - demonstrate raw CSS skills.
-
-Good luck! We're excited to see your solution! 🚀

@@ -1,74 +1,133 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  color: #f0f0f0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.wrapper {
-  width: 100%;
+.app-container {
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
 }
 
-.complain-form {
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h2,
+.list-section h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.complaint-form {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #fff3;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px #0003;
   margin-bottom: 20px;
+  padding: 20px;
 }
 
-.complain-form input,
-.complain-form textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
+.complaint-form input,
+.complaint-form textarea {
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 25px;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
   box-sizing: border-box;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 15px;
+  width: 100%;
+  outline: none; 
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-.complain-form button {
-  padding: 8px;
+
+.complaint-form input::placeholder,
+.complaint-form textarea::placeholder {
+  color:#cde7e7;
 }
 
-.error-message {
-  color: red;
-  margin-top: 10px;
+
+.complaint-form input:focus,
+.complaint-form textarea:focus {
+  color: #fff;
+  border-color: #ffffff;
 }
 
-.complain-item {
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+
+
+.error-text {
+  font-size: 0.9rem;
+}
+
+.complaint-form button {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  border: none;
+  border-radius: 100px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.complaint-form button:hover {
+  transform: scale(1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0.95;
+}
+
+
+.complaint-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.complaint-card {
+  background: #fff3;
+  border: 1px solid hsla(0, 0%, 100%, .3);
+  border-radius: 30px;
+  box-shadow: 0 4px 10px #0003;
+  padding: 20px 25px;
+  transition: all .3s ease;
+}
+
+.complaint-card h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+.complaint-card p {
+  margin-top: 0.5em;
+}
+
+.complaint-card:hover {
+  transform: scale(1.01);
+}
+
+@media (max-width: 600px) {
+  .complaint-card {
+    font-size: 0.9rem;
+  }
 }
