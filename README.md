@@ -24,10 +24,10 @@ CSS (custom styling)
 🚀 Getting Started
 
 # Clone the repository
-git clone https://github.com/yourusername/complaint-app.git
+git clone https://github.com/rahmanabdur1/react-recruitment-task
 
 # Navigate into the project directory
-cd complaint-app
+cd react-recruitment-task
 
 # Install dependencies
 npm install

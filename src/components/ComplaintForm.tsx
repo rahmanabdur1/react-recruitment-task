@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React, { useEffect, useState } from 'react';
 import { saveComplain } from '../api';
 
@@ -34,8 +34,12 @@ const ComplaintForm: React.FC<Props> = ({ onSuccess }) => {
       setBody('');
       setSuccess('Complaint submitted successfully!');
       onSuccess();
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+        if (err instanceof Error) {
+            setError("Failed to submit complaint: " + err.message);
+          } else {
+            setError("An unknown error occurred");
+          }
     } finally {
       setSubmitting(false);
     }

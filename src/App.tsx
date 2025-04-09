@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { useEffect, useState, useCallback } from "react";
 import "./App.css";
 import { Complain } from "./types";
@@ -17,8 +17,12 @@ function App() {
     try {
       const data = await fetchComplains();
       setComplains(data);
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError("Failed to submit complaint: " + err.message);
+      } else {
+        setError("An unknown error occurred");
+      }
     } finally {
       setLoading(false);
     }
